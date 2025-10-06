@@ -22,3 +22,6 @@ steps:
 
 images:
   - 'gcr.io/$PROJECT_ID/telegram-bot'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
