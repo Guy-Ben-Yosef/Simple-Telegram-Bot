@@ -1,5 +1,13 @@
 # cloudbuild.yaml
 steps:
+  - name: 'python:3.11'
+    id: 'install-deps'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        pip install --upgrade pip
+        pip install -r requirements.txt
   # 1. Build container image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/telegram-bot', '.']
