@@ -17,7 +17,7 @@ steps:
         '--image', 'gcr.io/$PROJECT_ID/telegram-bot',
         '--region', 'us-central1',
         '--allow-unauthenticated',
-        '--set-secrets', 'TELEGRAM_TOKEN=TELEGRAM_TOKEN:latest'
+        '--set-secrets TELEGRAM_TOKEN=TELEGRAM_TOKEN:latest'
       ]
 
 images:
