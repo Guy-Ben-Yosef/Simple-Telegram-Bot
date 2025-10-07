@@ -9,7 +9,7 @@ steps:
     args: ['push', 'gcr.io/$PROJECT_ID/telegram-bot']
 
   # 3. Deploy to Cloud Run
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:485.0.0-slim'
     entrypoint: gcloud
     args:
       [
